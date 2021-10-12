@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Fall : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,13 +15,8 @@ public class Bullet : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter2D(Collider2D Hitinfo)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        enemy target = Hitinfo.GetComponent<enemy>();
-        if (target != null)
-        {
-            Destroy(gameObject);
-            Destroy(Hitinfo.gameObject);
-        }
+        Destroy(collision.gameObject);
     }
 }

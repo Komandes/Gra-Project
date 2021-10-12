@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class enemy : MonoBehaviour
 {
-    public Transform player;
+    private Transform player;
     public float speed = 1;
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -12,6 +12,7 @@ public class enemy : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame

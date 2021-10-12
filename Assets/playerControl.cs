@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class playerControl : MonoBehaviour
 {
-    float movementSpeed = 4;
-    float jumpForce = 8;
+    float movementSpeed = 6;
+    float jumpForce = 7;
 
-    Vector3 lastDirection;
-
+   
     private Rigidbody2D _rigidbody;
     // Start is called before the first frame update
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
-        lastDirection = Vector3.down;
+
     }
 
     // Update is called once per frame
@@ -27,5 +26,6 @@ public class playerControl : MonoBehaviour
         {
             _rigidbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
+
     }
 }
