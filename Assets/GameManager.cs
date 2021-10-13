@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     {
         if (timeSinceLastSpawnSide >= spawnIntervalSide)
         {
-            int[] lanesx = new int[] {-20, 20 };
+            int[] lanesx = new int[] {-10, 10 };
             float randomY = Random.Range(5, -1);
             int randomIndex = Random.Range(0, lanesx.Length);
             Instantiate(enemy, new Vector3(lanesx[randomIndex], randomY, 0), Quaternion.identity);
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
         if (timeSinceLastSpawnUp >= spawnIntervalUp)
         {
-            float randomX = Random.Range(-10, 10);
+            float randomX = Random.Range(-12, 12);
             Instantiate(enemy, new Vector3(randomX, 11, 0), Quaternion.identity);
             timeSinceLastSpawnUp = 0;
         }

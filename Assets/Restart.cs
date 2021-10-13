@@ -3,25 +3,21 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class Fall : MonoBehaviour
+public class Restart : MonoBehaviour
 {
-    public GameObject GameOver;
-    public GameObject Button;
     // Start is called before the first frame update
     void Start()
     {
-
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void RestartGame()
     {
-         Destroy(gameObject);
-         GameOver.SetActive(true);
-         Button.SetActive(true);
+        SceneManager.LoadScene("SampleScene");
     }
 }

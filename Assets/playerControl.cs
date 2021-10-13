@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class playerControl : MonoBehaviour
 {
     float movementSpeed = 6;
     float jumpForce = 7;
-
+    public int hp = 4;
+    public GameObject GameOver;
+    public GameObject Button;
    
     private Rigidbody2D _rigidbody;
     // Start is called before the first frame update
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        GameOver.SetActive(false);
+        Button.SetActive(false);
 
     }
 
@@ -28,4 +33,17 @@ public class playerControl : MonoBehaviour
         }
 
     }
+
+    public void GetHit()
+    {
+        hp--;
+        if(hp <= 0)
+        {
+            Destroy(gameObject);
+            GameOver.SetActive(true);
+            Button.SetActive(true);
+
+        }
+    }
+  
 }
