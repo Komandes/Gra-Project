@@ -24,6 +24,7 @@ public class Fall : MonoBehaviour
         if (target != null)
         {
             Destroy(gameObject);
+            Time.timeScale = 0;
             GameOver.SetActive(true);
             Button.SetActive(true);
         }

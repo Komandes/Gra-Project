@@ -40,6 +40,7 @@ public class playerControl : MonoBehaviour
         if(hp <= 0)
         {
             Destroy(gameObject);
+            Time.timeScale = 0;
             GameOver.SetActive(true);
             Button.SetActive(true);
 
