@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7A9E275D-6CFF-CFB2-387C-C0B13BE615D5}</ProjectGuid>
+    <ProjectGuid>{E5CE07BB-42C4-771C-A2E1-9678F01DE89E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -57,12 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\GameManager.cs" />
+    <Compile Include="Assets\Restart.cs" />
     <Compile Include="Assets\playerControl.cs" />
     <Compile Include="Assets\Bullet.cs" />
     <Compile Include="Assets\Fall.cs" />
     <Compile Include="Assets\enemy.cs" />
     <Compile Include="Assets\Shooting.cs" />
-    <Compile Include="Assets\Restart.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

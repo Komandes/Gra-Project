@@ -18,10 +18,14 @@ public class Fall : MonoBehaviour
     {
 
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D Hitinfo)
     {
-         Destroy(gameObject);
-         GameOver.SetActive(true);
-         Button.SetActive(true);
+        playerControl target = Hitinfo.GetComponent<playerControl>();
+        if (target != null)
+        {
+            Destroy(gameObject);
+            GameOver.SetActive(true);
+            Button.SetActive(true);
+        }
     }
 }
